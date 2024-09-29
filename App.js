@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, Text, Button, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { View, Button, Text } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -7,6 +7,7 @@ const Stack = createStackNavigator();
 
 function HomeScreen({ navigation }) {
   return (
+<<<<<<< HEAD
     <View style={styles.container}>
       {/* Hình ảnh sản phẩm */}
       <Image
@@ -76,10 +77,18 @@ function ColorSelectionScreen({ navigation }) {
       >
         <Text style={styles.doneButtonText}>XONG</Text>
       </TouchableOpacity>
+=======
+    <View>
+      <Button
+        title="Go to Details"
+        onPress={() => navigation.navigate('Details')}
+      />
+>>>>>>> 17f7a287de16790eac190e06f3fa0816986ccf2c
     </View>
   );
 }
 
+<<<<<<< HEAD
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -175,16 +184,33 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   }
 });
+=======
+function DetailsScreen() {
+  return (
+    <View>
+      <Text>Details Screen</Text>
+    </View>
+  );
+}
+>>>>>>> 17f7a287de16790eac190e06f3fa0816986ccf2c
 
 function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
+<<<<<<< HEAD
         <Stack.Screen name="Chọn Màu" component={ColorSelectionScreen} />
+=======
+        <Stack.Screen name="Details" component={DetailsScreen} />
+>>>>>>> 17f7a287de16790eac190e06f3fa0816986ccf2c
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> 17f7a287de16790eac190e06f3fa0816986ccf2c
